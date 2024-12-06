@@ -25,10 +25,10 @@ jobs:
 
     - name: Build and Tag the Docker Image
       run: |
-        docker build . --file Dockerfile --tag ghcr.io/kiryometsy/my-image-name:latest
-        docker tag ghcr.io/kiryometsy/my-image-name:latest ghcr.io/kiryometsy/my-image-name:${{ env.timestamp }}
+        docker build . --file Dockerfile --tag ghcr.io/Rbabinski2000/docker-compose-image:latest
+        docker tag ghcr.io/Rbabinski2000/docker-compose-image:latest ghcr.io/Rbabinski2000/docker-compose-image:${{ env.timestamp }}
 
     - name: Push Docker Images to GitHub Container Registry
       run: |
-        docker push ghcr.io/kiryometsy/my-image-name:latest
-        docker push ghcr.io/kiryometsy/my-image-name:${{ env.timestamp }}
+        docker push ghcr.io/Rbabinski2000/docker-compose-image:latest
+        docker push ghcr.io/Rbabinski2000/docker-compose-image:${{ env.timestamp }}
